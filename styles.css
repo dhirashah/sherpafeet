@@ -73,3 +73,75 @@ header {
     margin-left: 10px;
     vertical-align: middle;
 }
+
+/* Styles for the info section on the main page */
+.info-section {
+    margin-top: 40px;
+    text-align: center;
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+    color: #4a7c59;
+}
+
+.info-section p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4a7c59;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #3b6246;
+}
+
+/* Styles for the benefits page */
+.benefits-list h2 {
+    color: #4a7c59;
+    margin-bottom: 20px;
+}
+
+.benefits-list h3 {
+    color: #4a7c59;
+    margin-top: 20px;
+}
+
+.benefits-list p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Styles for the back-to-home link */
+.back-to-home {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a7c59;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #3b6246;
+}
+    
