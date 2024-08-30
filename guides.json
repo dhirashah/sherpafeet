@@ -1,20 +1,50 @@
 [
     {
         "name": "Ravi Thakur",
-        "phone": "+911234567890",
-        "treks": "Beas Kund, Hampta Pass",
+        "phone": "+919736842584",
+        "treks": "Hampta Pass, Pha Konda, Hampta Circle, Deo Tibba Base Camp, Bhrigu Lake, Beas Kund, Rani Sui Lake",
         "image": "guidephoto/Ravi Thakur.jpeg"
     },
     {
         "name": "Mukul",
-        "phone": "+919876543210",
-        "treks": "Roopkund, Kedarkantha",
+        "phone": "++918278843844",
+        "treks": "Bhrigu Lake, Beas kund, Rani  Sui Lake, Friendship Peak",
         "image": "guidephoto/Mukul.jpeg"
     },
     {
         "name": "Ishwar Thakur",
-        "phone": "+919123456789",
-        "treks": "Chandratal, Pin Parvati Pass",
+        "phone": "+918580865656",
+        "treks": "Deo Tibba Glacier, Hampta Pass, Chandrakhani, Bhon Bhoni Pass, Beas Kund",
         "image": "guidephoto/Ishwar Thakur.jpeg"
+    },
+    {
+        "name": "Love Rawat",
+        "phone": "+918449319791",
+        "treks": "Dodital Darwa Pass, Dayara bugyal, Mukta Top, Gulabi Kantha, Kusu Kalyan, Tapovan",
+        "image": "guidephoto/Love Rawat.jpeg"
+    },
+    {
+        "name": "Rajesh Panwar",
+        "phone": "+919927099352",
+        "treks": "Dodital Darwa Pass, Bamsarukha (The Grand Banderpunch Circuit), Kedarkantha, Har ki Doon, Dayara bugyal, Mukta Top, Gulabi Kantha, Kusu Kalyan, Gaumukh Tapovan",
+        "image": "guidephoto/Rajesh Panwar.jpeg"
+    },
+    {
+        "name": "Saurabh Singh",
+        "phone": "+916395296549",
+        "treks": "Dodital Darwa Pass, Bamsarukha (The Grand Banderpunch Circuit), Kedarkantha, Har ki Doon, Dayara bugyal, Mukta Top, Gulabi Kantha, Kusu Kalyan, Gaumukh Tapovan, Surya Top",
+        "image": "guidephoto/Saurabh Singh.jpeg"
+    },
+    {
+        "name": "Praveen Singh",
+        "phone": "+919690269067",
+        "treks": "Gaumukh Tapovan, Vasukital, Kalindi Pass, Kedartal, Auden's Col, Bhagirathi 2 peak, Dayara Bugyal, Dodital, Kedarkantha, Mugdatal", 
+        "image": "guidephoto/Praveen Singh.jpeg"
+    },
+    {
+        "name": "Rajbeer Singh Rawat",
+        "phone": "+919837329835",
+        "treks": "Dodital, Dayara Bugyal, Gangotri Gaumukh Tapovan, Kusu Kalyan Shastratal, Gulabi Kantha",
+        "image": "guidephoto/Rajbeer Singh Rawat.jpeg"
     }
 ]
