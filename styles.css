@@ -11,7 +11,7 @@ header {
     background-image: url('static\\bg2.jpg'); /* Add a beautiful panoramic image of the Himalayas */
     background-size: cover;
     background-position: center;
-    color: white;
+    color: grey;
     padding: 100px 20px;
     text-align: center;
 }
@@ -57,7 +57,7 @@ header {
 .guide-name {
     font-size: 1.2em;
     margin: 10px 0;
-    color: #4a7c59;
+    color: #4a7c75;
 }
 
 .contact-info {
@@ -148,4 +148,18 @@ header {
 .back-link:hover {
     background-color: #3b6246;
 }
-    
+
+.global-note {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e0f7fa; /* Light cyan background for a fresh look */
+    border: 1px solid #4db6ac; /* Teal border to match the background */
+    border-radius: 8px; /* Rounded corners for a modern touch */
+    text-align: center; /* Center align the text */
+}
+
+.global-note p {
+    font-size: 1.1em; /* Larger font size for better readability */
+    color: #00796b; /* Darker teal color for text to stand out */
+    margin: 0;
+}
