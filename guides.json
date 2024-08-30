@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ravi Thakur",
+        "phone": "+911234567890",
+        "treks": "Beas Kund, Hampta Pass",
+        "image": "guidephoto/Ravi Thakur.jpeg"
+    },
+    {
+        "name": "Mukul",
+        "phone": "+919876543210",
+        "treks": "Roopkund, Kedarkantha",
+        "image": "guidephoto/Mukul.jpeg"
+    },
+    {
+        "name": "Ishwar Thakur",
+        "phone": "+919123456789",
+        "treks": "Chandratal, Pin Parvati Pass",
+        "image": "guidephoto/Ishwar Thakur.jpeg"
+    }
+]

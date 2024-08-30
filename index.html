@@ -13,38 +13,40 @@
     </header>
 
     <div class="container">
-        <div class="guide-list">
-            <div class="guide-item">
-                <img src="guidephoto\Ravi Thakur.jpeg" alt="Ravi Thakur" class="guide-image">
-                <div class="guide-details">
-                    <h2 class="guide-name">Ravi Thakur</h2>
-                    <p class="contact-info">Contact: +91 9736842584
-                        <a href="https://wa.me/+919736842584" target="_blank">
-                            <img src="static\wa.png" alt="WhatsApp" class="whatsapp-icon">
-                        </a>
-                    </p>
-                    <p class="treks">Treks: Beas Kund, Hampta Pass</p>
-                </div>
-            </div>
-
-            <div class="guide-item">
-                <img src="guidephoto\Ishwar Thakur.jpeg" alt="Ishwar Thakur" class="guide-image">
-                <div class="guide-details">
-                    <h2 class="guide-name">Ishwar Thakur</h2>
-                    <p class="contact-info">Contact: +91 8580865656</p>
-                    <p class="treks">Treks: Hampta Pass</p>
-                </div>
-            </div>
-
-            <div class="guide-item">
-                <img src="guidephoto\Mukul.jpeg" alt="Guide 3" class="guide-image">
-                <div class="guide-details">
-                    <h2 class="guide-name">Mukul</h2>
-                    <p class="contact-info">Contact: +91 8278843844</p>
-                    <p class="treks">Treks: Beas Kund</p>
-                </div>
-            </div>
+        <div id="guides" class="guide-list">
+            <!-- Guides will be populated here -->
         </div>
+    </div>
+
+    <footer id="contact">
+        <!-- Footer Content -->
+    </footer>
+
+    <script>
+        // Fetch the JSON and populate the guides
+        fetch('guides.json')
+            .then(response => response.json())
+            .then(data => {
+                const guides = data;
+                const guideList = document.getElementById('guides');
+
+                guides.forEach(guide => {
+                    const guideItem = document.createElement('div');
+                    guideItem.className = 'guide-item';
+
+                    guideItem.innerHTML = `
+                        <img src="${guide.image}" alt="${guide.name}" class="guide-image">
+                        <div class="guide-details">
+                            <h2 class="guide-name">${guide.name}</h2>
+                            <p class="contact-info">Phone: <a href="tel:${guide.phone}">${guide.phone}</a></p>
+                            <p class="treks">Treks: ${guide.treks}</p>
+                        </div>
+                    `;
+                    guideList.appendChild(guideItem);
+                });
+            })
+            .catch(error => console.error('Error fetching the guides data:', error));
+    </script>
 
         <!-- New Section Linking to Local Guides Benefits Page -->
         <div class="info-section">
