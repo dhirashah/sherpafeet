@@ -22,6 +22,43 @@
         </div>
     </div>
 
+<!-- SMS Modal -->
+<div id="smsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSmsPopup()">&times;</span>
+        
+        <!-- Title with Guide's Name -->
+        <h2 id="modalTitle">Send a Message to Guide</h2>
+
+        <form id="smsForm">
+            <!-- User Name -->
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" name="userName" required 
+                   placeholder="Enter your name">
+
+            <!-- User Phone Number -->
+            <label for="userPhone">Your Phone Number:</label>
+            <input type="text" id="userPhone" name="userPhone" required 
+                   pattern="^\d{10}$" 
+                   placeholder="Enter your phone number"
+                   title="Enter a valid 10-digit phone number">
+
+            <!-- Guide's Phone Number (Pre-filled & Read-only) -->
+            <label for="phone">Guide's Phone Number:</label>
+            <input type="text" id="phone" name="phone" readonly>
+
+            <!-- Message Text Area -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Type your message here"></textarea>
+
+            <!-- Send SMS Button -->
+            <button type="button" onclick="sendSMS()">Send SMS</button>
+        </form>
+    </div>
+</div>
+
+
     <footer id="contact">
         <!-- Footer Content -->
     </footer>
@@ -50,6 +87,57 @@
                 });
             })
             .catch(error => console.error('Error fetching the guides data:', error));
+
+                // Function to show the SMS pop-up and reset the form
+    function showSmsPopup(guidePhone, guideName) {
+        const modal = document.getElementById("smsModal");
+        modal.style.display = "block";
+
+        // Reset the form fields each time
+        document.getElementById("smsForm").reset();
+
+        // Set the guide's phone number
+        document.getElementById("phone").value = guidePhone;
+
+        // Update the modal title with the guide's name
+        document.getElementById("modalTitle").textContent = "Send a Message to " + guideName;
+    }
+
+    // Close modal function
+    function closeSmsPopup() {
+        document.getElementById("smsModal").style.display = "none";
+    }
+
+    // Function to open default SMS app with pre-filled message
+    function sendSMS() {
+        const phone = document.getElementById("phone").value;
+        const userName = document.getElementById("userName").value;
+        const userPhone = document.getElementById("userPhone").value;
+        const message = document.getElementById("message").value;
+
+        // Validation: Ensure fields are filled
+        if (!userName || !userPhone || !message) {
+            alert("Please fill in all fields before sending.");
+            return;
+        }
+
+        // Pre-filled SMS message
+        const smsBody = `Hello, my name is ${userName} (${userPhone}). ${message}`;
+
+        // Open SMS app with pre-filled text
+        window.location.href = `sms:${phone}?body=${encodeURIComponent(smsBody)}`;
+    }
+
+    // Attach event listeners to SMS icons
+    document.querySelectorAll('.sms-icon-link').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            const guidePhone = this.getAttribute('data-phone');
+            const guideName = this.getAttribute('data-name');
+            showSmsPopup(guidePhone, guideName);
+        });
+    });
+
     </script>
 
         <!-- New Section Linking to Local Guides Benefits Page -->
